@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'objc-obfuscator'
+
+Objc_Obfuscator::CLI.start(ARGV)
