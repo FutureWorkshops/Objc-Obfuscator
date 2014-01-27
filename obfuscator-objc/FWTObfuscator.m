@@ -47,9 +47,9 @@ const NSUInteger kPBKDFRounds = 2000;  // ~16ms on an iPhone 4 -> same # rounds 
     NSArray *components = [obfuscatedString componentsSeparatedByString:@"-"];
     NSAssert(components.count==3, @"Obfuscated string is not of the right format");
     
-    NSData *encryptedString = [components[0] dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *iv = [components[1] dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *salt = [components[2] dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *encryptedString = [[NSData alloc] initWithBase64EncodedString:components[0] options:0];
+    NSData *iv = [[NSData alloc] initWithBase64EncodedString:components[1] options:0];
+    NSData *salt = [[NSData alloc] initWithBase64EncodedString:components[2] options:0];
     NSError *error = nil;
     NSData *unobfuscatedData = [FWTObfuscator decryptedDataForData:encryptedString
                                                           password:self.encryptionKey
