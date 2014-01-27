@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'objc-obfuscator'
-  s.version     = '0.2.2'
+  s.version     = '0.2.3'
   s.date        = '2014-01-23'
   s.summary     = "A simple obfuscator that encrypts strings in source files"
   s.description = "A simple obfuscator that encrypts strings in source files"
