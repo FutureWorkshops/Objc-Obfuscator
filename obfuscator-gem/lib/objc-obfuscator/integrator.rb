@@ -24,8 +24,9 @@ module Objc_Obfuscator
         rvm rvmrc trust
         rvm rvmrc load
       fi
-      find ${SRCROOT} -name "*.h" -exec objc-obfuscator obfuscate #{encryption_key} {} \\;
-      find ${SRCROOT} -name "*.m" -exec objc-obfuscator obfuscate #{encryption_key} {} \\;
+      for file in `grep -rl __obfuscate ${SRCROOT}/*.h`; do; objc-obfuscator obfuscate #{encryption_key}; done"
+      for file in `grep -rl __obfuscate ${SRCROOT}/*.m`; do; objc-obfuscator obfuscate #{encryption_key}; done"
+
       SCRIPT
 
       phase_unobf = project.new('PBXShellScriptBuildPhase')
