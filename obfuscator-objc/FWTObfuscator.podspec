@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "FWTObfuscator"
   s.platform     = :ios
-  s.deployment_target = "7.0"
+  s.ios.deployment_target = "7.0"
   s.version      = "0.2.3"
   s.summary      = "ObjC library that supports objc-obfuscator gem"
   s.description  = <<-DESC
@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
 
-  s.source_files = "*.{h,m}"
+  s.source_files = "obfuscator-objc/*.{h,m}"
   s.frameworks = 'Security'
-  s.public_header_files = '*.h'
-  s.private_header_files = 'FWTObfuscator+Private.h'
+  s.public_header_files = 'obfuscator-objc/*.h'
+  s.private_header_files = 'obfuscator-objc/FWTObfuscator+Private.h'
   
 end

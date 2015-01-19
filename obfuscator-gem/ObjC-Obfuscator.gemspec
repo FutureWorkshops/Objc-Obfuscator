@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'objc-obfuscator'
-  s.version     = '0.2.6'
-  s.date        = '2014-01-23'
+  s.version     = '0.2.7'
+  s.date        = '2015-01-19'
   s.summary     = "A simple obfuscator that encrypts strings in source files"
   s.description = "A simple obfuscator that encrypts strings in source files"
   s.authors     = ["Fabio Gallonetto"]
@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_runtime_dependency 'encryptor', '~> 1.3.0'
   s.add_runtime_dependency 'thor', '~> 0.18.1'
-  s.add_runtime_dependency 'xcodeproj', '~> 0.19.0'
+  s.add_runtime_dependency 'xcodeproj', '~> 0.21.0'
 
   s.add_development_dependency 'rspec', '~> 2.13.0'
   s.add_development_dependency 'rake', '~> 10.0.3'
