@@ -1,5 +1,6 @@
 require 'objc-obfuscator/integrator'
 require 'fileutils'
+require 'xcodeproj'
 
 describe "StringEncryptor" do
   include ObjC_Obfuscator::Integrator
@@ -13,5 +14,8 @@ describe "StringEncryptor" do
       FileUtils.cp_r 'spec/support/sample_project', dir
       project_path = File.join dir, 'sample_project', 'TestProject', 'TestProject.xcodeproj'
       podfile_path = File.join dir, 'sample_project', 'Podfile'
+      target_name = 'TestProject'
+
+      integrate_xcode
     end
   end
