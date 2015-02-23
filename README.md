@@ -94,3 +94,5 @@ The computational overhead is neglect-able (and can always be improved with the 
 
 - [iOS applications reverse engineering](http://media.hacking-lab.com/scs3/scs3_pdf/SCS3_2011_Bachmann.pdf)
 
+## License
+Objc Ofbuscator is available under the MIT license. See LICENSE file for more info.
