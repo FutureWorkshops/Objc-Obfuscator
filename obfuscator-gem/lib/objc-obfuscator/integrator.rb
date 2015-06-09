@@ -24,8 +24,8 @@ module Objc_Obfuscator
         rvm rvmrc trust
         rvm rvmrc load
       fi
-      for file in `grep -rl __obfuscate ${SRCROOT}/*.h`; do; objc-obfuscator obfuscate #{encryption_key}; done"
-      for file in `grep -rl __obfuscate ${SRCROOT}/*.m`; do; objc-obfuscator obfuscate #{encryption_key}; done"
+      for file in `grep -rl __obfuscate ${SRCROOT} --include="*.h"`; do objc-obfuscator obfuscate #{encryption_key} $file; done
+      for file in `grep -rl __obfuscate ${SRCROOT} --include="*.h"`; do objc-obfuscator obfuscate #{encryption_key} $file; done
 
       SCRIPT
 
