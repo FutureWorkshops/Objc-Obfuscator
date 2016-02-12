@@ -60,7 +60,7 @@ In order to make this whole process transparent to the developer, the strings ha
 
 In order to do that we need to add two shell execution phases to our target: one before and one after the compilation takes place.
 
-The gem takes it a step further, and if you're using [Cocoapods](http://cocoapods.org) in your project, you can integrate the library with one single command:
+The gem takes it a step further, and if you're using [CocoaPods](http://cocoapods.org) in your project, you can integrate the library with one single command:
 
 ```bash
 $ objc-obfuscator integrate myEncryptionKey myproject.xcodeproj
